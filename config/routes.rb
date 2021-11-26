@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :applies
   resources :jobs
   devise_for :admins
   devise_for :workers
@@ -7,4 +8,5 @@ Rails.application.routes.draw do
   root to: "jobs#index"
   resources :headhunters
   resources :workers
+  get '/applies/worker/:id', to: 'workers#applies', as: 'applies_worker'
 end

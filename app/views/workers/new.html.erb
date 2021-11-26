@@ -1,0 +1,16 @@
+<h1> Create new Worker</h1>
+<p>
+	<%= form_with model: @Worker do |form | %>
+	<p>
+		<%= form.label :name %> <br/>
+		<%= form.text_field :name %> <br/>
+	</p>	
+	<p>
+		<%= form.label :contact %> <br/>
+		<%= form.text_field :contact %> <br/>
+	</p>
+	<p>
+		<%= form.submit %>
+	</p>	
+	<% end %>
+</p>

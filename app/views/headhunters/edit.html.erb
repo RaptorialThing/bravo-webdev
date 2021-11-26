@@ -1,0 +1,14 @@
+<h1> Edit headhunter profile </h1>
+	<%= form_with model: @Headhunter do |form | %>
+	<p>
+		<%= form.label :name %> <br/>
+		<%= form.text_field :name %> <br/>
+	</p>	
+	<p>
+		<%= form.label :contact %> <br/>
+		<%= form.text_field :contact %> <br/>
+	</p>
+	<p>
+		<%= form.submit %>
+	</p>	
+	<% end %>

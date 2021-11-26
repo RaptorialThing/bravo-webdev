@@ -1,8 +1,23 @@
 <p>
-<h1>This is headhunter profile</h1>
+<h1>This is headhunters index</h1>
 </p>
 <p>
-Name: <%= @Headhunter.name %>
-<br/>
-Contact <%= @Headhunter.contact %>
+	<%= link_to "My headhunter profile", headhunter_path(current_headhunter.id) %>
 </p>
+<div>
+<h2> my headhunter jobs </h2>
+<% @jobs.each do |job| %>
+	<div>
+		Title: <%= job.title %> <br/>
+		<%= link_to "See more", job_path(job.id)%>
+	</div>	<br/>
+<% end %>
+</div>	
+
+<h2> my applicants (workers) </h2>
+<% @workers.each do |worker| %>
+<div>
+	Name: <%= worker.name %> <br/>
+	<%= link_to "See more", worker_path(worker.id) %>
+</div> <br/>	
+<% end %> 

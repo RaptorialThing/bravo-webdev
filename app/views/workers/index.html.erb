@@ -2,7 +2,18 @@
 <h1>This is worker profile</h1>
 </p>
 <p>
-Name: <%= @Worker.name %>
-<br/>
-Contact <%= @Worker.contact %>
+	<%= link_to "My worker profile", worker_path(current_worker.id) %> <br/>
 </p>
+<p>
+	<%= link_to "Applyed by me as a worker jobs", applies_worker_path(current_worker.id)%> <br/>
+</p>
+<div>
+<% @jobs.each do |job| %>
+	<div> 
+		Title: <%= job.title %> <br/>
+		<%= link_to "See more", job_path(job.id) %> <br/>
+		<%= link_to "Apply", applies_path(job_id: job.id),         :method => :post %> 
+	</div>
+	<br/>
+<% end %>	
+</div>

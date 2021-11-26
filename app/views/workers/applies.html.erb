@@ -1,0 +1,9 @@
+<h1> My applies to jobs </h1>
+<div>
+<% @jobs.each do |job| %>
+	<div>
+	Title: <%= job.title %> <br/>
+	<%= link_to "See more", job_path(job.id)%>
+	<div> <br/>
+<% end %>	
+<div>

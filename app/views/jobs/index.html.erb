@@ -1,7 +1,17 @@
-
+<%= render "layouts/registration" %>
 <p>This is an article from index.html.erb </p>
-<p> <%= link_to "Registration as headhunter", new_headhunter_registration_path %> </p>
+<p> <%= link_to "Registration as headhunter", new_headhunter_path %> </p>
 <p><%= link_to "Login as headhunter", new_headhunter_session_path %></p>
+<p>
+	<%= link_to "My headhunter profile", headhunters_path %>
+</p>	
 <br/>
 <p><%= link_to "Registration as worker", new_worker_registration_path  %></p>
 <p><%= link_to "Login as worker", new_worker_session_path %> </p>
+<p>
+	<%= link_to "My worker profile", workers_path%>
+</p>
+
+<p>
+	<%= link_to "Create new job", new_job_path %>
+</p>

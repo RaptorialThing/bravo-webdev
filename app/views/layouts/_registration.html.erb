@@ -1,0 +1,16 @@
+<% content_for :registration do -%>
+ <% if current_headhunter %>
+    Logged in as: <%= current_headhunter.email %><br/>
+    <%= link_to 'Edit Password', edit_headhunter_password_path %>
+    <%= button_to 'Logout', destroy_headhunter_session_path, method: :delete %>
+    <% else %>
+    <%= link_to 'Login as headhunter', new_headhunter_session_path %>
+  <% end %>
+   <% if current_worker %>
+    Logged in as: <%= current_worker.email %><br/>
+    <%= link_to 'Edit Password', edit_worker_password_path %>
+    <%= button_to 'Logout', destroy_worker_session_path, method: :delete %>
+    <% else %>
+    <%= link_to 'Login as worker', new_worker_session_path %>
+  <% end %>
+  <% end -%>

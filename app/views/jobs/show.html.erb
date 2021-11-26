@@ -1,0 +1,13 @@
+<%= render "layouts/registration" %>
+<h1> Job </h1>
+<div>
+Title: <%= @job.title %> <br/>
+Description <%= @job.description %> 
+</div>
+<div>
+<%= link_to "Edit", edit_job_path %> <br/>
+<%= link_to "Destroy", job_path(@job),
+					    method: :delete,
+					    data: {confirm: "Are you ready?"} %> <br/>
+<%= link_to "home", root_path %>
+</div>	
